@@ -35,7 +35,7 @@ export default function DetailsComponent(){
                   <Phone className=" w-4 h-4 shrink-0 text-neutral-500 " />
                 </div>
                 <Link
-                  href="tel:+911234567891"
+                  href="tel:+917899304607"
                   className="hover:underline hover:underline-offset-2 font-medium text-ellipsis text-md font-mono md:leading-0 tracking-wide"
                 >
                   +91 78993 04607
@@ -49,7 +49,7 @@ export default function DetailsComponent(){
                   <MailIcon className=" w-4 h-4 shrink-0 text-neutral-500 " />
                 </div>
                 <Link
-                  href="mailto:mahesha@gmail.com"
+                  href="mailto:maheshabr2004@gmail.com"
                   className="font-medium hover:underline hover:underline-offset-2 text-ellipsis text-md font-mono md:leading-0 tracking-wide"
                 >
                   maheshabr2004@gmail.com
@@ -63,7 +63,7 @@ export default function DetailsComponent(){
                   <Globe className=" w-4 h-4 shrink-0 text-neutral-500 " />
                 </div>
                 <Link
-                  href="https://mahesha.dev"
+                  href="https://www.mahesha.dev"
                   className="hover:underline hover:underline-offset-2 font-medium text-ellipsis text-md font-mono md:leading-0 tracking-wide"
                 >
                   mahesha.dev
