@@ -23,7 +23,7 @@ export default function ProjectsComponent() {
       <div className=" w-full border-y border-neutral-200/80 dark:border-neutral-800/80 h-12">
         <div className="md:w-3xl w-full h-full flex justify-center items-center mx-auto border-x border-neutral-200/80 dark:border-neutral-800/80">
           <Link
-            href="/blogs"
+            href="/projects"
             className=" px-3 py-1 cursor-pointer group flex justify-center items-center gap-2 font-medium rounded-2xl shadow-inner shadow-neutral-600 dark:shadow-neutral-500 dark:bg-neutral-700 hover:shadow-neutral-500 hover:bg-neutral-700 bg-neutral-800 text-neutral-100"
           >
             <span>All Projects</span>

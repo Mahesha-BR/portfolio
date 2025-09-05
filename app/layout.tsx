@@ -9,7 +9,7 @@ import { Toaster } from "sonner";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  display: "swap", // ensures fallback font shows until Inter loads
+  display: "swap",
   fallback: ["system-ui", "Helvetica", "Arial", "sans-serif"],
 });
 
@@ -85,7 +85,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// max-w-3xl mx-auto
-// border-x
-// border-neutral-800

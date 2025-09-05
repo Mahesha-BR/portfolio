@@ -102,11 +102,21 @@ function AddProject() {
       live: true,
       coverImageUrl: form.imageUrl,
       time: form.timeline,
+      stack:form.stack
     };
 
     try {
       await AddProjectFunction(projectData);
-      console.log("✅ Project Submitted:", projectData);
+      setForm({
+        title: "",
+        imageUrl: "",
+        timeline: "",
+        stack: "",
+        mdxContent: "",
+        sourceLink: "",
+        websiteLink: "",
+      });
+      setMdxSource(null);
     } catch (err) {
       console.error("❌ Error submitting project:", err);
     }
@@ -327,7 +337,6 @@ function AddBlog() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Blog Submitted:", form);
     const slug = slugify(form.title);
 
     const blogData: Blog = {
@@ -339,7 +348,8 @@ function AddBlog() {
 
     try {
       await AddBlogFunction(blogData);
-      console.log("✅ Blog Submitted:", blogData);
+      setForm({ title: "", imageUrl: "", timeline: "", mdxContent: "" });
+      setMdxSource(null);
     } catch (err) {
       console.error("❌ Error submitting Blog:", err);
     }

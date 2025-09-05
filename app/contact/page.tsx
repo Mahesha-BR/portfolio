@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Diveder } from "../page";
 import { Info, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import Footer from "@/components/Footer";
 
 export default function ConatctPage() {
   const [form, setForm] = useState({
@@ -167,9 +168,10 @@ export default function ConatctPage() {
             </form>
           </div>
         </div>
-        <div className=" w-full border-y h-6">
+        <div className=" w-full border-t h-6">
           <div className=" w-3xl mx-auto border-x h-full "></div>
         </div>
+        <Footer/>
         <div className="w-full h-fit border-b">
           <Diveder />
         </div>

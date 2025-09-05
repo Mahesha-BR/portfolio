@@ -5,10 +5,11 @@ import { getMdx } from "@/utils/lib/mdx";
 import { ArrowLeft, ArrowRight, ExternalLink, GithubIcon } from "lucide-react";
 import Link from "next/link";
 import path from "path";
+import projects from "@/projects.json";
 
 type Props = {
-    params: Promise<{ slug: string }>;
-}
+  params: Promise<{ slug: string }>;
+};
 
 const POSTS_PATH = path.join(process.cwd(), "/app/projects/mdx/");
 
@@ -17,6 +18,11 @@ export default async function SingleProjectPage({ params }: Props) {
   const fullPath = path.join(POSTS_PATH, `${slug}`);
   console.log(fullPath);
   const { mdxSource, frontmatter } = await getMdx(fullPath);
+
+  const currentProject = projects.find((project) => project.slug === slug);
+  const stack = currentProject?.stack || [];
+  const sourceLink = currentProject?.sourceLink || "/";
+  const websiteLink = currentProject?.websiteLink || "/";
   return (
     <div className="fixed inset-0 z-[-99]">
       <div className="h-full overflow-x-hidden overflow-y-scroll scroll-smooth">
@@ -57,12 +63,13 @@ export default async function SingleProjectPage({ params }: Props) {
             )}
 
             <div className="w-full h-fit flex ">
-              {/* <ProjectStackDisplay /> */}
+              <ProjectStackDisplay stack={stack} />
             </div>
             <div className="w-full h-6 border-y"></div>
             <div className="w-full h-fit border-b py-2 px-4 flex items-center gap-4">
               <Link
-                href={"/"}
+                href={sourceLink}
+                target="Github"
                 className=" px-3 py-2 cursor-pointer group flex justify-center items-center gap-2 font-medium rounded-3xl shadow-inner shadow-neutral-600 dark:shadow-neutral-500 dark:bg-neutral-700 hover:shadow-neutral-500 hover:bg-neutral-700 bg-neutral-800 text-neutral-100"
               >
                 <GithubIcon className="size-5 shrink-0" />
@@ -70,7 +77,8 @@ export default async function SingleProjectPage({ params }: Props) {
                 <ArrowRight className=" group-hover:translate-x-1 transition-transform ease-in-out h-4 w-4 shrink-0" />
               </Link>
               <Link
-                href="/blogs"
+                href={websiteLink}
+                target="_blank"
                 className="px-3 py-2 cursor-pointer group flex justify-center items-center gap-2 font-medium rounded-3xl shadow-inner shadow-neutral-600 dark:shadow-neutral-500 dark:bg-neutral-700 hover:shadow-neutral-500 hover:bg-neutral-700 bg-neutral-800 text-neutral-100"
               >
                 <ExternalLink className="size-5 shrink-0" />

@@ -24,24 +24,24 @@ const defaultresults = [
   { name: "", iconName: "Menu" },
   { name: "/", icon: <HomeIcon />, iconName: "Home Page" },
   { name: "/#about", icon: <UserCircle2 />, iconName: "About Me" },
-  { name: "projects", icon: <Package />, iconName: "Projects Page" },
-  { name: "blogs", icon: <Rss />, iconName: "Blogs Page" },
-  { name: "contact", icon: <ContactRound />, iconName: "Contact Page" },
+  { name: "/projects", icon: <Package />, iconName: "Projects Page" },
+  { name: "/blogs", icon: <Rss />, iconName: "Blogs Page" },
+  { name: "/contact", icon: <ContactRound />, iconName: "Contact Page" },
   { name: "", iconName: "Socials" },
   {
-    name: "https://github.com",
+    name: "https://x.com",
     imageSource:
       "https://assets.chanhdai.com/images/link-icons/liquid-glass/x.webp",
     iconName: "X",
   },
   {
-    name: "https://x.com",
+    name: "https://www.linkedin.com/in/mahesha-br-3096822b9/",
     imageSource:
       "https://assets.chanhdai.com/images/link-icons/liquid-glass/linkedin.webp",
     iconName: "Linkedin",
   },
   {
-    name: "https://linkedin.com",
+    name: "https://github.com/Mahesha-BR",
     imageSource:
       "https://assets.chanhdai.com/images/link-icons/liquid-glass/github.webp",
     iconName: "Github",

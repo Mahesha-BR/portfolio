@@ -5,7 +5,12 @@
     "time": "2025-08-28",
     "live": true,
     "slug": "welcome-to-my-portfolio",
-    "sourceLink": "https://github.com/Mahesha-BR",
-    "websiteLink": "https://mahesha.dev"
+    "sourceLink": "https://github.com/Mahesha-BR/portfolio",
+    "websiteLink": "https://mahesha.dev",
+    "stack": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ]
   }
 ]
