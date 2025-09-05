@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mahesha.dev
+
+# Sitemaps
+Sitemap: https://mahesha.dev/sitemap.xml

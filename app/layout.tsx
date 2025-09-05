@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     url: "https://www.mahesha.dev",
     siteName: "Mahesha Portfolio",
     type: "website",
+    
     images: [
       {
         url: "https://www.mahesha.dev/me.jpeg",
@@ -66,6 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="8gbSvzl3sJHckpYiPgiq-CH_z2NMTjqlJRKXIUw9_rw" />
+      </head>
       <body
         className={` ${inter.className} selection:bg-black selection:text-white dark:selection:bg-neutral-50 dark:selection:text-black antialiased scroll-smooth`}
       >
