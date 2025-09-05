@@ -13,7 +13,7 @@ const POSTS_PATH = path.join(process.cwd(), "/app/blogs/mdx/");
 
 export default async function SingleBlogPage({ params }: Props) {
   const { slug } = await params;
-  console.log("params.slug", slug);
+  console.log("params slug is:", slug);
   const fullPath = path.join(POSTS_PATH, `${slug}`);
   const { mdxSource, frontmatter } = await getMdx(fullPath);
   return (
